@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Col, Row } from "react-bootstrap";
+import { InmuebleCard } from "../components/InmuebleCard";
 import { useParams } from "react-router-dom";
-import { Form } from "react-router-dom";
-import { Button } from "bootstrap";
 import { findInmuebleById } from "../server/InmueblesData";
+import image from "../assets/image1.jpg";
 
 function DetalleInmueble() {
     const { id } = useParams();
@@ -24,7 +23,14 @@ function DetalleInmueble() {
     }, [setInmueble])
 
     return (
-       <h1>{inmueble.descripcion}</h1>
+        <div className="container d-flex justify-content-center align-items-center h-100">
+            <div className="row">
+                <div>
+                    <InmuebleCard imageSource={image} descripcion={inmueble.descripcion} 
+                          coeficiente={inmueble.coeficiente} url="" _id={inmueble._id} />
+                </div>
+            </div>
+        </div>
     )
 }
 export { DetalleInmueble }

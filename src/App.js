@@ -4,6 +4,7 @@ import { ContactPage } from "./pages/ContactPage";
 import { BlogPage } from "./pages/BlogPage";
 import { Inmuebles } from "./pages/Inmuebles";
 import { DetalleInmueble } from "./pages/DetalleInmueble";
+import { DetalleRecibo } from "./pages/DetalleRecibo";
 import { Menu } from "./components/Menu";
 import { NotFound } from "./pages/NotFound";
 import { Container } from "react-bootstrap";
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/inmuebles" element={<Inmuebles/>} />
           <Route path="/inmuebles/:id" element={<DetalleInmueble/>} />
+          <Route path="/facturas/:id" element={<DetalleRecibo/>} />
           <Route path="/contacto" element={<ContactPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/*" element={<NotFound />} />
