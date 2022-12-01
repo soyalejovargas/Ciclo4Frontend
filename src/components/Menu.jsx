@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom"
 import Dropdown from 'react-bootstrap/Dropdown';
 function Menu(){
     return(
-  
         <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
           <NavLink className="navbar-brand" to="/">Inicio</NavLink>

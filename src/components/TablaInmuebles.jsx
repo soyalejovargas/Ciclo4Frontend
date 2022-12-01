@@ -3,8 +3,10 @@ import Table from 'react-bootstrap/Table';
 import { Link } from "react-router-dom";
 import { loadInmuebles } from "../server/InmueblesData";
 
+
 function TablaInmuebles(){
     const [inmuebles, setInmuebles] = useState([]);
+
     async function listInmuebles(){
         try {
             const res = await loadInmuebles();
